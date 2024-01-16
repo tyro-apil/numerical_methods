@@ -51,4 +51,5 @@ void solution(){
         *(x+i) = mat[i][n]/mat[i][i];
         printf("x[%d] = %10.4f\n", i+1, *(x+i));
     }
+    free(x);
 }

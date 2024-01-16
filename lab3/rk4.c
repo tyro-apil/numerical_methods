@@ -18,7 +18,7 @@ int main(){
 }
 
 void solution(){
-    float (*slope)(float, float) = diff1;
+    float (*slope)(float, float) = diff3;
     float m, m1, m2, m3, m4, x0, y0, x1, y1, xn;
     float h;
     printf("Enter x0 y0 h xn: ");
@@ -33,7 +33,7 @@ void solution(){
         x1 = x0+h;
         x0 = x1;
         y0 = y1;
-        printf("%10.4f %10.4f %10.4f\n", x0, y0);
+        printf("%10.4f %10.4f\n", x0, y0);
     }while(x0 < xn);
 }
 
@@ -41,6 +41,10 @@ float diff1(float x, float y){
     return x+y;
 }
 
-float func1(float x){
-    return 2*exp(x)-x-1;
+float diff2(float x, float y){
+    return x*cos(x);
+}
+
+float diff3(float x, float y){
+    return x*x+y;
 }

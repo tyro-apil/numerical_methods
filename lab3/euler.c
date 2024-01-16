@@ -4,13 +4,8 @@
 void solution();
 
 float diff1(float, float);
-float func1(float);
-
 float diff2(float, float);
-float func2(float);
-
 float diff3(float, float);
-float func3(float);
 
 int main(){
     solution();
@@ -18,7 +13,7 @@ int main(){
 }
 
 void solution(){
-    float (*slope)(float, float) = diff1;
+    float (*slope)(float, float) = diff3;
     float x0, y0, xn, m, x1, y1;
     float h;
     printf("Enter x0 y0 h xn: ");
@@ -35,4 +30,12 @@ void solution(){
 
 float diff1(float x,float y){
     return x+y;
+}
+
+float diff2(float x, float y){
+    return x*cos(x);
+}
+
+float diff3(float x, float y){
+    return x*x+y;
 }
